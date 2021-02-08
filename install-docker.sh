@@ -14,6 +14,10 @@ sudo add-apt-repository \
    stable" -y
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+echo "Install docker-compose"
+sudo curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+#
 sudo mkdir /srv/nexus
 sudo chmod 600 /srv/nexus
 
